@@ -208,6 +208,16 @@ Contributions are welcome, especially:
 
 Please do not include cookie values, account details, tokens, or private page content in an issue. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting code and [SECURITY.md](SECURITY.md) for sensitive reports.
 
+## Xiaohongshu offline mini tool
+
+This repository also includes a bilingual offline H5 introduction page built for Xiaohongshu's Mini Tool format. It presents the project, its safety boundaries, and installation steps, and lets a user generate a promotional card and save it to the photo album from within Xiaohongshu.
+
+- Upload-ready package: [CookieTrim-Xiaohongshu-MiniTool.zip](xiaohongshu-minitool/CookieTrim-Xiaohongshu-MiniTool.zip)
+- Source: [xiaohongshu-minitool/dist](xiaohongshu-minitool/dist)
+- Validation record: [xiaohongshu-minitool/VALIDATION.md](xiaohongshu-minitool/VALIDATION.md)
+
+Because the format is offline and blocks outbound links, the mini tool does not open or copy a GitHub URL. It displays the repository name `CookieTrim` and author `rinrin583` for an in-app GitHub search.
+
 ## Frequently asked questions
 
 <details>

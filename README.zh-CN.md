@@ -184,6 +184,16 @@ npm test
 
 详细记录见 [TEST_REPORT.md](TEST_REPORT.md)。每次推送和拉取请求也会通过 GitHub Actions 自动运行同一组检查。
 
+## 小红书离线小工具
+
+仓库同时提供一个符合小红书“小工具”离线 H5 规范的双语介绍页，可用于展示项目、安全边界和安装步骤，并可在小红书环境中生成宣传卡、由用户点击保存到相册。
+
+- 可上传包：[CookieTrim-Xiaohongshu-MiniTool.zip](xiaohongshu-minitool/CookieTrim-Xiaohongshu-MiniTool.zip)
+- 源文件：[xiaohongshu-minitool/dist](xiaohongshu-minitool/dist)
+- 校验记录：[xiaohongshu-minitool/VALIDATION.md](xiaohongshu-minitool/VALIDATION.md)
+
+受平台离线与外链限制，小工具不会打开、复制或跳转 GitHub 地址，而是显示项目名 `CookieTrim` 和作者名 `rinrin583`，供用户在 GitHub 内搜索。
+
 ## 仓库结构
 
 ```text

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CookieTrim · 饼干退退退</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero" id="top">
+      <img class="hero-logo" src="./assets/logo.png" alt="CookieTrim logo">
+      <div class="hero-copy">
+        <p class="eyebrow">COOKIE CONSENT, TRIMMED.</p>
+        <h1>CookieTrim</h1>
+        <p class="hero-cn">饼干退退退 🍪</p>
+      </div>
+      <p class="hero-lead">把反复弹出的 Cookie 横幅，尽量自动切到“仅必要”。</p>
+      <p class="hero-en">A tiny browser extension that prefers necessary cookies.</p>
+      <div class="badge-row" aria-label="项目特点">
+        <span>开源免费</span><span>本地运行</span><span>零遥测</span><span>个人非盈利</span>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="页面导航">
+      <button class="nav-button is-active" type="button" data-target="intro">它是啥</button>
+      <button class="nav-button" type="button" data-target="safety">安全吗</button>
+      <button class="nav-button" type="button" data-target="install">怎么装</button>
+      <button class="nav-button" type="button" data-target="english">English</button>
+    </nav>
+
+    <section class="card accent-card" id="intro">
+      <p class="section-kicker">01 / 不想再点第 800 次</p>
+      <h2>网页：来块饼干？<br>我：必要的留下，其余退退退。</h2>
+      <p>CookieTrim 会识别常见的 Cookie 同意横幅，优先点击“仅必要”“拒绝非必要”或同等选项。它不是广告拦截器，也不会替你删除登录状态。</p>
+      <div class="flow" aria-label="工作流程">
+        <div><b>发现</b><span>识别同意横幅</span></div>
+        <i>→</i>
+        <div><b>选择</b><span>优先仅必要</span></div>
+        <i>→</i>
+        <div><b>安静</b><span>继续逛网页</span></div>
+      </div>
+      <p class="fine-print">不同网站的按钮和规则会变化，无法保证覆盖所有页面；遇到关键网站时，请以页面实际选择为准。</p>
+    </section>
+
+    <section class="card" id="safety">
+      <p class="section-kicker">02 / 安全说明</p>
+      <h2>它碰什么，不碰什么</h2>
+      <div class="check-grid">
+        <article><span class="check">✓</span><h3>只在浏览器本地工作</h3><p>不建账号，不接服务器，不上传浏览记录。</p></article>
+        <article><span class="check">✓</span><h3>没有统计或遥测</h3><p>不追踪你访问过哪些网站，也不出售数据。</p></article>
+        <article><span class="check">✓</span><h3>代码公开可检查</h3><p>核心规则、权限和处理逻辑都能在仓库中查看。</p></article>
+        <article><span class="check">✓</span><h3>权限用途写清楚</h3><p>页面访问权限用于识别和操作 Cookie 横幅。</p></article>
+      </div>
+      <div class="notice"><b>诚实边界：</b>“开源、无遥测、本地运行”不等于绝对零风险。安装任何浏览器扩展前，都应核对来源、权限和代码。</div>
+    </section>
+
+    <section class="card" id="install">
+      <p class="section-kicker">03 / 安装</p>
+      <h2>在 GitHub 找到它</h2>
+      <p>小红书小工具不能跳转外部链接。请在 GitHub 里搜索下面两项：</p>
+      <div class="search-box">
+        <span>项目名 / Repository</span>
+        <strong>CookieTrim</strong>
+      </div>
+      <div class="search-box">
+        <span>作者 / Author</span>
+        <strong>rinrin583</strong>
+      </div>
+      <ol class="steps">
+        <li><b>下载</b><span>进入仓库，下载发布包或源代码 ZIP。</span></li>
+        <li><b>解压</b><span>打开 Chrome 扩展程序页面，开启“开发者模式”。</span></li>
+        <li><b>加载</b><span>选择“加载已解压的扩展程序”，选中项目文件夹。</span></li>
+        <li><b>检查</b><span>打开扩展设置，按需调整自动处理选项。</span></li>
+      </ol>
+      <p class="fine-print">请只从项目官方仓库获取版本。浏览器商店版本是否上线，请以仓库说明为准。</p>
+    </section>
+
+    <section class="card english-card" id="english" lang="en">
+      <p class="section-kicker">04 / ENGLISH</p>
+      <h2>A quieter way to handle cookie banners</h2>
+      <p>CookieTrim is a free, open-source, non-profit browser extension made by an individual developer. It attempts to choose “necessary only” or an equivalent rejection option on common consent banners.</p>
+      <ul class="plain-list">
+        <li>Runs locally in your browser</li>
+        <li>No analytics or telemetry</li>
+        <li>No browsing-history upload</li>
+        <li>Auditable source code</li>
+      </ul>
+      <p class="fine-print">No extension can support every website or promise absolute safety. Review its permissions and source before installation. Search GitHub for <b>CookieTrim</b> by <b>rinrin583</b>.</p>
+    </section>
+
+    <section class="poster-panel" id="posterPanel" aria-live="polite">
+      <div class="poster-heading">
+        <div><p class="section-kicker">分享素材</p><h2>生成一张宣传卡</h2></div>
+        <button id="closePoster" class="text-button" type="button">收起</button>
+      </div>
+      <canvas id="posterCanvas" width="720" height="960" aria-label="CookieTrim 宣传卡预览"></canvas>
+    </section>
+
+    <footer>
+      <p>CookieTrim · 饼干退退退</p>
+      <p>Open source · Non-profit · Privacy first</p>
+    </footer>
+  </main>
+
+  <div class="action-bar">
+    <div class="action-inner">
+      <p id="saveStatus">想安利给朋友？先生成宣传卡。</p>
+      <button id="savePoster" class="primary-button" type="button">生成并保存到相册</button>
+    </div>
+  </div>
+
+  <script src="./assets/main.js"></script>
+</body>
+</html>
