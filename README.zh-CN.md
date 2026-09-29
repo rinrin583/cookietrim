@@ -10,6 +10,7 @@
   [![MIT 协议](https://img.shields.io/badge/License-MIT-08783f.svg)](LICENSE)
   [![无遥测](https://img.shields.io/badge/telemetry-none-f3a52b.svg)](PRIVACY.md)
   [![独立项目](https://img.shields.io/badge/项目-个人独立・完全非商业-6f42c1.svg)](#安全不是口号而是可以检查的设计)
+  [![双语 PDF](https://img.shields.io/badge/PDF-双语介绍-CB3A2E.svg)](output/pdf/CookieTrim_Bilingual_Introduction.pdf)
 
   [English](README.md) · **简体中文**
 </div>

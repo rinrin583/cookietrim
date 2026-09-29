@@ -9,6 +9,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-08783f.svg)](LICENSE)
   [![No telemetry](https://img.shields.io/badge/telemetry-none-f3a52b.svg)](PRIVACY.md)
   [![Independent project](https://img.shields.io/badge/project-independent%20%26%20non--commercial-6f42c1.svg)](#trust-through-verifiable-design)
+  [![Bilingual PDF](https://img.shields.io/badge/PDF-bilingual%20introduction-CB3A2E.svg)](output/pdf/CookieTrim_Bilingual_Introduction.pdf)
 
   **English** · [简体中文](README.zh-CN.md)
 </div>
