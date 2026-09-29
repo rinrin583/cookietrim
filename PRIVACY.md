@@ -2,6 +2,8 @@
 
 CookieTrim runs locally in Chrome.
 
+CookieTrim is an independent, non-commercial personal open-source project. It has no advertising, analytics, affiliate tracking, paid backend, account system, or data-selling business model.
+
 ## Data it stores
 
 - Extension settings, such as whether automation and the success indicator are enabled.
@@ -13,6 +15,8 @@ This data is stored in `chrome.storage.local` inside your Chrome profile.
 ## Data it does not collect
 
 CookieTrim has no telemetry, analytics, advertising, account system, remote code, or external network service. It does not upload browsing history, page content, cookies, or stored settings.
+
+The shipped runtime contains no `fetch`, XMLHttpRequest, WebSocket, or `sendBeacon` call. The manifest requests no `cookies`, `webRequest`, `declarativeNetRequest`, `history`, or `tabs` permission.
 
 ## Website access
 

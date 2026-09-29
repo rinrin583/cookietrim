@@ -9,6 +9,7 @@
   [![Manifest V3](https://img.shields.io/badge/Chrome-Manifest%20V3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/reference/manifest)
   [![MIT 协议](https://img.shields.io/badge/License-MIT-08783f.svg)](LICENSE)
   [![无遥测](https://img.shields.io/badge/telemetry-none-f3a52b.svg)](PRIVACY.md)
+  [![独立项目](https://img.shields.io/badge/项目-个人独立・完全非商业-6f42c1.svg)](#安全不是口号而是可以检查的设计)
 
   [English](README.md) · **简体中文**
 </div>
@@ -89,6 +90,24 @@ CookieTrim 的完整运行代码都在这个仓库中，不依赖服务器。
 尤其需要说明：CookieTrim **没有**申请 `cookies`、`webRequest`、`declarativeNetRequest`、`history` 或 `tabs` 权限。它不读取 Cookie 值，不拦截网络请求，也不上传浏览记录。Chrome 官方文档说明，`storage.local` 是扩展专用的本地存储，并会在扩展卸载时清除；可参见 [Chrome Storage API](https://developer.chrome.com/docs/extensions/reference/api/storage)。
 
 完整说明见 [PRIVACY.md](PRIVACY.md)。
+
+## 安全不是口号，而是可以检查的设计
+
+CookieTrim 是一个**个人独立开发、完全非商业、开源免费**的项目。它没有广告盈利模式、付费后台、联盟推广追踪、账号系统或数据交易关系。写它的目的很简单：少被 Cookie 弹窗烦几次，而不是再制造一套用户画像。
+
+与其说“你相信我，它很安全”，不如把能检查的事实全部摆出来：
+
+| 检查项 | 可以验证的结果 |
+|---|---|
+| 源代码是否公开？ | 是。扩展全部运行代码都在本仓库中，并采用 MIT License。 |
+| 是否向项目服务器发送数据？ | 否。运行代码中没有 `fetch`、XHR、WebSocket 或 `sendBeacon` 调用。 |
+| 能否读取 Chrome 的 Cookie 仓库？ | 不能。Manifest 没有申请 `cookies` 权限。 |
+| 能否监听或改写网络流量？ | 不能。没有申请 `webRequest` 或 `declarativeNetRequest`。 |
+| 是否加载远程可执行代码？ | 不会。全部可执行文件随扩展一起提供。 |
+| 设置和操作摘要放在哪里？ | 只通过 `chrome.storage.local` 保存在用户自己的 Chrome 配置中。 |
+| 遇到无法判断的弹窗怎么办？ | 保持弹窗可见，不猜、不乱点、更不会点击“全部接受”。 |
+
+这些设计能够显著降低数据收集风险，但任何软件都不应被宣传成“绝对安全”。欢迎任何人检查这套很小的代码、逐项核对权限，并按照 [SECURITY.md](SECURITY.md) 报告问题。
 
 ## 安装方法
 

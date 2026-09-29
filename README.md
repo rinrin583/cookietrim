@@ -8,6 +8,7 @@
   [![Manifest V3](https://img.shields.io/badge/Chrome-Manifest%20V3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/reference/manifest)
   [![License: MIT](https://img.shields.io/badge/License-MIT-08783f.svg)](LICENSE)
   [![No telemetry](https://img.shields.io/badge/telemetry-none-f3a52b.svg)](PRIVACY.md)
+  [![Independent project](https://img.shields.io/badge/project-independent%20%26%20non--commercial-6f42c1.svg)](#trust-through-verifiable-design)
 
   **English** · [简体中文](README.zh-CN.md)
 </div>
@@ -86,6 +87,24 @@ CookieTrim is intentionally small and local. Its complete runtime is included in
 Notably, CookieTrim requests **no** `cookies`, `webRequest`, `declarativeNetRequest`, `history`, or `tabs` permission. It does not read cookie values, intercept network traffic, or upload browsing data. Chrome documents that `storage.local` is extension-specific local storage and is cleared when the extension is removed; see the [Chrome Storage API](https://developer.chrome.com/docs/extensions/reference/api/storage).
 
 For the full plain-language statement, read [PRIVACY.md](PRIVACY.md).
+
+## Trust through verifiable design
+
+CookieTrim is an independent, non-commercial personal open-source project. It has no advertising business model, paid backend, affiliate tracking, account system, or data-broker relationship. Its purpose is to remove repetitive consent work—not to create another source of user profiling.
+
+Security should be supported by evidence, not by asking users to trust a slogan. The current release can be checked directly:
+
+| Check | Verifiable result |
+|---|---|
+| Is the source public? | Yes. The complete extension runtime is in this repository under the MIT License. |
+| Does it send data to a project server? | No. The runtime contains no `fetch`, XHR, WebSocket, or `sendBeacon` call. |
+| Can it read Chrome's cookie store? | No. The manifest does not request the `cookies` permission. |
+| Can it inspect or rewrite network traffic? | No. It requests neither `webRequest` nor `declarativeNetRequest`. |
+| Does it load remote executable code? | No. All executable files ship with the extension. |
+| Where are preferences and action summaries stored? | Locally in the user's Chrome profile through `chrome.storage.local`. |
+| What happens when a banner is ambiguous? | CookieTrim leaves it visible instead of guessing or accepting. |
+
+This design substantially reduces data-collection risk, but no software should be described as “absolutely safe.” Users and contributors are encouraged to inspect the small codebase, review every permission, and report concerns through [SECURITY.md](SECURITY.md).
 
 ## Installation
 

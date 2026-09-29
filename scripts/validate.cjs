@@ -37,4 +37,24 @@ if (/remove\(\).*cookie|document\.cookie\s*=/.test(content)) {
   throw new Error("Content script must not delete or directly rewrite site cookies");
 }
 
-console.log("validate.cjs: manifest, referenced files, JavaScript syntax, and cookie-safety checks passed");
+const forbiddenPermissions = ["cookies", "webRequest", "declarativeNetRequest", "history", "tabs"];
+const declaredPermissions = new Set([
+  ...(manifest.permissions || []),
+  ...(manifest.optional_permissions || [])
+]);
+for (const permission of forbiddenPermissions) {
+  if (declaredPermissions.has(permission)) {
+    throw new Error(`Privacy boundary violated by permission: ${permission}`);
+  }
+}
+
+const runtimeFiles = ["background.js", "content-script.js", "popup.js", "options.js", "rules.js"];
+const outboundPrimitives = /\b(fetch|XMLHttpRequest|WebSocket|EventSource|sendBeacon)\b/;
+for (const file of runtimeFiles) {
+  const source = fs.readFileSync(path.join(root, file), "utf8");
+  if (outboundPrimitives.test(source)) {
+    throw new Error(`Unexpected outbound-network primitive in ${file}`);
+  }
+}
+
+console.log("validate.cjs: manifest, referenced files, JavaScript syntax, privacy boundaries, and cookie-safety checks passed");
