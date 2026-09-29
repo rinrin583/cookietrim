@@ -1,13 +1,16 @@
 <div align="center">
   <img src="assets/brand/cookietrim-logo.png" width="144" alt="CookieTrim 图标">
-  <h1>CookieTrim</h1>
-  <p><strong>只留下必要的。</strong></p>
+  <h1>CookieTrim｜饼干退退退</h1>
+  <p><strong>一个被 Cookie 弹窗逼疯后写出来的插件。</strong></p>
+  <p>只留下必要的，其他饼干统统退退退。</p>
   <p>一个本地运行的 Chrome 扩展，自动在 Cookie 同意横幅中选择“拒绝全部”或“仅必要”。</p>
 </div>
 
 ## 为什么叫 CookieTrim？
 
 它不是彻底禁用 Cookie，而是把不必要的同意选项“修剪掉”。因此名称比 `No Cookie` 更准确，也不会与已有的 `I Don't Care About Cookies` 项目混淆。
+
+中文昵称叫 **“饼干退退退”**：既保留了对烦人弹窗的真实情绪，也没有假装扩展会删除所有 Cookie。正式技术名用于 GitHub 和代码，中文昵称用于界面与社交平台传播。
 
 ## 主要功能
 
