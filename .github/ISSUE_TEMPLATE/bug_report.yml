@@ -1,0 +1,38 @@
+name: Banner not handled
+description: Report a public website where CookieTrim did not make the expected safe choice.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Public URL
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Banner language
+    validations:
+      required: true
+  - type: textarea
+    id: labels
+    attributes:
+      label: Visible button labels
+      description: Do not include cookie values, account data, tokens, or private page content.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened, and what should have happened?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed personal data, cookie values, credentials, and private page content.
+          required: true

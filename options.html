@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CookieTrim 设置</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="options">
+  <main>
+    <header>
+      <img class="brand-icon" src="icons/icon-48.png" alt="">
+      <div>
+        <h1>CookieTrim</h1>
+        <p>只留下必要的 · 自动拒绝非必要 Cookie</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>行为</h2>
+      <label class="switch-row">
+        <span><strong>启用自动管理</strong><small>在所有 HTTP/HTTPS 网站运行</small></span>
+        <input id="enabled" type="checkbox">
+      </label>
+      <label class="switch-row">
+        <span><strong>显示处理提示</strong><small>成功后在页面右下角显示 3 秒</small></span>
+        <input id="show-indicator" type="checkbox">
+      </label>
+      <label class="switch-row">
+        <span><strong>调试日志</strong><small>只写入浏览器开发者控制台</small></span>
+        <input id="debug" type="checkbox">
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>例外名单</h2>
+      <p>每行一个域名。支持 <code>example.com</code> 或 <code>*.example.com</code>。</p>
+      <textarea id="allowlist" rows="8" spellcheck="false" placeholder="example.com&#10;*.university.example"></textarea>
+    </section>
+
+    <section class="panel warning">
+      <h2>安全边界</h2>
+      <ul>
+        <li>扩展只操作网页中的 Cookie 同意界面，不删除现有 Cookie。</li>
+        <li>找不到可靠拒绝入口时，会保留横幅供你手动处理。</li>
+        <li>扩展不会点击“接受全部”，也不会向外部服务器发送数据。</li>
+      </ul>
+    </section>
+
+    <div class="actions">
+      <button id="save" type="button">保存设置</button>
+      <span id="status" role="status"></span>
+    </div>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

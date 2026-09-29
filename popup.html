@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CookieTrim</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <header>
+    <img class="brand-icon" src="icons/icon-48.png" alt="">
+    <div>
+      <h1>CookieTrim</h1>
+      <p>只留下必要的 · 本地运行</p>
+    </div>
+  </header>
+
+  <main>
+    <label class="switch-row">
+      <span><strong>自动管理</strong><small>拒绝广告与非必要 Cookie</small></span>
+      <input id="enabled" type="checkbox">
+    </label>
+
+    <section class="site-card">
+      <span>当前网站</span>
+      <strong id="hostname">—</strong>
+      <button id="toggle-site" type="button">在此网站暂停</button>
+    </section>
+
+    <section class="stats">
+      <div><strong id="rejected-count">0</strong><span>直接拒绝</span></div>
+      <div><strong id="saved-count">0</strong><span>偏好已保存</span></div>
+    </section>
+
+    <p id="last-action" class="last-action">尚无操作记录</p>
+    <button id="open-options" class="secondary" type="button">高级设置与例外名单</button>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

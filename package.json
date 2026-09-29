@@ -1,0 +1,8 @@
+{
+  "name": "cookietrim",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/rules.test.cjs && node scripts/validate.cjs"
+  }
+}
